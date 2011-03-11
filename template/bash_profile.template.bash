@@ -50,5 +50,23 @@ export TODO="t"
 # Set store directory for handmade commandline history tool 
 export hchtstoredir="$HOME/.hcht"
 
+
 # Load Bash It
 source $BASH/bash_it.sh
+
+alias rnd='VVERBOSE=1 QUEUE=* rake environment resque:work'
+alias caps='bundle exec cap staging deploy:migrations'
+alias capp='bundle exec cap production deploy:migrations'
+alias b="cd ~/Projects/billetto"
+alias bc="bundle exec cucumber --drb -r features/"
+alias t='python ~/Resources/t/t.py --task-dir ~/tasks --list tasks'
+
+# MacPorts Installer addition on 2011-01-11_at_10:25:29: adding an appropriate $
+export PATH=/opt/local/bin:/opt/local/sbin:$PATH
+# Finished adapting your PATH environment variable for use with MacPorts.
+
+export RUBY_GC_MALLOC_LIMIT=80000000 
+export RUBY_HEAP_MIN_SLOTS=200000 
+export RUBY_HEAP_SLOTS_GROWTH_FACTOR=1 
+export RUBY_HEAP_SLOTS_INCREMENT=1 
+export RUBY_HEAP_FREE_MIN=100000
